@@ -9,12 +9,12 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./images/icons/rate.png"
     />
 
     <link href="./src/output.css" rel="stylesheet" />
 
-    <title>Frontend Mentor | Interactive rating component</title>
+    <title>Interactive rating component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -25,30 +25,51 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      .attribution a:hover {
+        color: hsl(217, 12%, 63%);
+        text-decoration: underline;
+      }
     </style>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline bg-amber-300">Hello world!</h1>
-    <!-- Rating state start -->
+  <body
+    class="bg-[#141519] text-white flex flex-col justify-center items-center min-h-screen gap-3 px-7 py-10"
+  >
+    <div
+      class="rate-container max-w-82.5 py-9 px-7 flex flex-col gap-5 rounded-2xl bg-[#222831]"
+    >
+      <div
+        class="logo rounded-full bg-[#292f38] shadow-[0_0_2px_rgba(0,0,0,0.7)] p-3 self-start"
+      >
+        <img src="./images/icon-star.svg" alt="yellow star" />
+      </div>
 
-    How did we do? Please let us know how we did with your support request. All
-    feedback is appreciated to help us improve our offering! 1 2 3 4 5 Submit
+      <!-- title -->
+      <h1 class="text-2xl">How did we do?</h1>
 
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don't hesitate to get in touch!
-
-    <!-- Thank you state end -->
+      <!-- text -->
+      <p class="text-sm text-[#949aa3]">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <ul class="flex gap-2 justify-between text-[#949aa3]">
+        <li class="rate" data-rate="1">1</li>
+        <li class="rate" data-rate="2">2</li>
+        <li class="rate" data-rate="3">3</li>
+        <li class="rate" data-rate="4">4</li>
+        <li class="rate" data-rate="5">5</li>
+      </ul>
+      <button
+        class="submit-btn bg-[#eb7e35] w-full py-2 rounded-full text-[#222831] font-bold hover:bg-white transition-transform cursor-pointer active:scale-98"
+      >
+        Submit
+      </button>
+    </div>
 
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Hary300</a>.
+      Coded by <a href="https://github.com/Hary300" target="_blank">Hary300</a>.
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
